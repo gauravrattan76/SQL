@@ -1,0 +1,33 @@
+Creating a Table
+________________________________________
+
+We need to go to the data base, we can do that from the UI.
+
+we can say that 
+Use [Garv]
+Go
+select * from dbo.tblPerson;
+
+_____________________________________________
+
+Create Table tblGender
+(
+Id int NOT NULL Primary Key,
+Gender nvarchar(50) NOT NULL
+)
+
+_________________________________________-
+Foreign Key are used to enforce database integrity.
+It only allows value if only exist in gender table.
+A foregin key in one table points to the primary key of another table.
+It prevents from invalid data being inserted into the foreign key column.
+
+The value you eneter into the foreign key column has to bee something from the record present in the other table.
+Helps in maintaining data integrity.
+
+_____________________________________________________
+
+
+
+_____________________________________________
+
