@@ -1,0 +1,42 @@
+Creating a Database-
+____________________________
+
+Can be done graphically
+
+click on database and say new databse and write the name there and then.
+
+______________________________________
+
+Create Database Sample1--query
+
+___________________________________________
+
+whenever we create a database 2 files get generated-
+1..MDF file- contains the actual data.
+2..LDF file -Transaction log file--use to recover the database
+
+
+________________________________________________
+
+To modify
+
+Alter Database Sample1 Modify Name = Newname
+_________________________________________________
+
+Drop Database SAMPLE2-- BOTHH LDF AND MDF gets deleted
+
+___________________________________
+
+Important thing-
+
+If we delete/drop a database then the database should not be in use by any one else.
+
+develpoer will get a error that the database is in use.
+
+so if we need to delete the database we need to bring it in single user mode and then delete it.
+
+Alter Database Sample set SINGLE_USER with Rollback Immediate
+
+Roolback_Immediate will rollback all incomplete transactions and close the connection to database.
+_______________________________________________________
+
