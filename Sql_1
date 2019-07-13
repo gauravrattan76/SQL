@@ -1,0 +1,11 @@
+Sql server Database and sql server managemnet studio are 2 different things.
+
+All the tables views etc are stored on sql server.
+
+Sql server management studio is a client tool to access the sql server.
+
+SSMS is a tool and not the server by itself.
+
+
+Developer machine connects to sql server using SSMS.
+
