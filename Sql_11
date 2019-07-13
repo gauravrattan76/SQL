@@ -1,0 +1,43 @@
+select SUM(salary) from employee--we get the sum of all the salaries
+
+min(),max(),
+____________________________________________________
+
+whatever we specify with the aggregate function we need to pass it with the group by
+
+select city,sum(salary) from employee
+group by city--group by is always used with the aggregate functions
+
+______________________________________________________
+
+
+having and where
+
+____________________________________________________
+
+select city,sum(salary)
+from employee
+where city in ('Delhi','Meerut')--where comes before the group by means we filter before grouping
+ group by city
+
+
+_________________________________________________________
+
+select city,sum(salary)
+from employee
+ group by city
+ having city = 'Delhi' or city ='Meerut'
+ 
+ 
+ __________________________________________________________
+ 
+ Difference between where and having-
+ 
+ where clause can be used with select insert and update statements
+ 
+ having can only be used with the select statements
+ 
+ ________________________________________
+ 
+ 
+ 
