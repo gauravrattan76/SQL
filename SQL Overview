@@ -1,0 +1,51 @@
+SQL-
+
+SQL is Structured Query Language, which is a computer language for storing, manipulating and retrieving data stored in relational database.
+
+SQL is the standard language for Relation Database System. All relational database management systems like MySQL, MS Access, Oracle, Sybase, Informix, postgres and SQL Server use SQL as standard database language.
+
+________________________________________________________________________________________
+
+Advantages-
+
+Allows users to access data in relational database management systems.
+Allows users to describe the data.
+Allows users to define the data in database and manipulate that data.
+Allows to embed within other languages using SQL modules, libraries & pre-compilers.
+Allows users to create and drop databases and tables.
+
+
+___________________________________________________________________________________
+
+
+Types of SQL Commands-
+
+Data Definition Language-
+
+CREATE Creates a new table, a view of a table, or other object in database
+ALTER Modifies an existing database object, such as a table.
+DROP Deletes an entire table, a view of a table or other object in the database.
+
+
+__________________________________________________________________________________
+
+Data Manipulation Language-
+
+INSERT Creates a record 
+UPDATE Modifies records
+DELETE Deletes records
+
+_____________________________________________________________________________________
+
+DCL Data Control Language:
+
+GRANT Gives a privilege to user 
+
+REVOKE Takes back privileges granted from user
+
+
+______________________________________________________________________________________
+
+Data Query Language:
+
+SELECT Retrieves certain records from one or more tables
