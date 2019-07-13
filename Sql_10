@@ -1,0 +1,59 @@
+Select statements-
+_______________________________________
+
+select * from tblPerson-- will give all the records from the table.
+
+select Id,Name from tblPerson-- will give the Id and Name from the table
+
+________________________________________________
+
+select Distinct Name from tblPerson;//will give the unique records.
+
+______________________________________________________
+
+
+select Distinct Id,Name from tblPerson;//it seraches for the distinct combinations of the two
+
+_____________________________________________________________
+
+select * from tblPerson where Name = 'Aastha'
+
+
+____________________________________________________________
+
+
+select * from tblPerson where Name <> 'Aastha'//nOT EQUAL TO OR !=
+
+___________________________________________________________________
+
+select * from tblPerson where Id IN (1,2,3,4)--Select from a list of values
+
+____________________________________________________________________
+
+select * from tblPerson where Id = 1 or id = 3
+
+____________________________________________________________________
+select * from tblPerson where Id between 2 and 5--here 2 and 5 are inclusive.
+
+_______________________________________________________________________________
+
+select * from tblPerson where name like 'A%'--Gives me all the record starting with A
+
+
+____________________________________________________________
+
+select * from tblPerson where email like '%@%'-- means the email conatins the text @
+
+__________________________________________________________________
+
+
+select the top most Id from the table-
+
+select top 1 * from tblPerson order by id desc//get the highest row details
+
+_________________________________________________________________
+
+select top 1 Id from tblPerson order by id desc-- gives the Highest Id that is 8
+
+
+________________________________________________________________________-
