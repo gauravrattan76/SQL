@@ -1,0 +1,60 @@
+Cross Join-
+_________________________________________
+
+
+CROSS JOIN, produces the cartesian product of the 2 tables involved in the join. For example, in the Employees table we have 10 rows and in the Departments table we have 4 rows. So, a cross join between these 2 tables produces 40 rows. Cross Join shouldn't have ON clause. 
+SELECT Name, Gender, Salary, DepartmentName
+FROM tblEmployee
+CROSS JOIN tblDepartment
+
+Result -
+
+
+we get a cartesian product that is 10 rows into 4 rows so total of 40 rows.
+
+
+___________________________________________________
+
+
+Inner Join-
+
+SELECT Name, Gender, Salary, DepartmentName
+FROM tblEmployee
+INNER JOIN tblDepartment
+ON tblEmployee.DepartmentId = tblDepartment.Id
+
+
+________________________________________________
+
+Left outer join-
+
+LEFT JOIN, returns all the matching rows + non matching rows from the left table. In reality, INNER JOIN and LEFT JOIN are extensively used.
+
+SELECT Name, Gender, Salary, DepartmentName
+FROM tblEmployee
+LEFT OUTER JOIN tblDepartment
+ON tblEmployee.DepartmentId = tblDepartment.Id
+
+
+_____________________________________________________
+
+Right Outer Join-
+
+SELECT Name, Gender, Salary, DepartmentName
+FROM tblEmployee
+RIGHT JOIN tblDepartment
+ON tblEmployee.DepartmentId = tblDepartment.Id
+
+
+___________________________________________________________
+
+Full outer Join-
+
+FULL JOIN or FULL OUTER JOIN
+I want all the rows from both the tables involved in the join. The query output should be, as shown below. 
+
+
+______________________________________________________________
+
+
+
