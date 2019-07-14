@@ -1,0 +1,26 @@
+1. The table meets all the conditions of 1NF
+2. Move redundant data to a separate table
+3. Create relationship between these tables using foreign keys. 
+
+
+The table below violates second normal form. There is lot of redundant data in the table. Let's say, in my organization there are 100,000 employees and only 2 departments (IT & HR). Since we are storing DeptName, DeptHead and DeptLocation columns also in the same table, all these columns should also be repeated 100,000 times, which results in unnecessary duplication of data. 
+
+That is to create two separate tables and have a relatinoship between the two.
+
+like emplyee belonging to particular department will have the same department details
+
+___________________________________________________________________________________________
+
+So this table is clearly violating the rules of the second normal form, and the redundant data can cause the following issues.
+1. Disk space wastage
+2. Data inconsistency
+3. DML queries (Insert, Update, Delete) can become slow _
+________________________________________________________________________________________________
+
+3NF-
+
+A table is said to be in 3NF, if the table
+1. Meets all the conditions of 1NF and 2NF
+2. Does not contain columns (attributes) that are not fully dependent upon the primary key
+
+The table below, violates third normal form, because AnnualSalary column is not fully dependent on the primary key EmpId. The AnnualSalary is also dependent on the Salary column. In fact, to compute the AnnualSalary, we multiply the Salary by 12. Since AnnualSalary is not fully dependent on the primary key, and it can be computed, we can remove this column from the table, which then, will adhere to 3NF.
