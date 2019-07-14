@@ -1,0 +1,6 @@
+1NF Form
+_______________________________________________
+
+1. The data in each column should be atomic. No multiple values, sepearated by comma.(emplyee name should not contain multiple values with comma separated)
+2. The table does not contain any repeating column groups(employee name1 employee name 2 employee name3)//so we split again in two tables
+3. Identify each record uniquely using primary key.
