@@ -1,0 +1,8 @@
+We are passing FirstName, MiddleName and LastName columns as parameters to the COALESCE() function. The COALESCE() function returns the first non null value from the 3 columns.
+SELECT Id, COALESCE(FirstName, MiddleName, LastName) AS Name
+FROM tblEmployee
+
+
+____________________________________________________________________________
+
+select COALESCE(FirstName,MiddleName,LastName) as Name from Employee1--It will give the first non null values from the table
