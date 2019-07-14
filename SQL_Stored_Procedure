@@ -1,0 +1,69 @@
+Stotred Procedure-
+
+A stored procedure is group of T-SQL (Transact SQL) statements. If you have a situation, where you write the same query over and over again, you can save that specific query as a stored procedure and call it just by it's name.
+
+________________________________________________________________
+
+Create Procedure spGetEmployees
+as
+Begin
+  Select Name, Gender from tblEmployee
+End
+
+
+_________________________________________________________________
+
+To execute the stored procedure, you can just type the procedure name and press F5, or use EXEC or EXECUTE keywords followed by the procedure name as shown below.
+1. spGetEmployees
+2. EXEC spGetEmployees
+3. Execute spGetEmployees
+
+
+______________________________________________________________________
+
+Creating procudre with Input parameters-
+
+Create Procedure spGetEmployeesByGenderAndDepartment 
+@Gender nvarchar(50),
+@DepartmentId int
+as
+Begin
+  Select Name, Gender from tblEmployee Where Gender = @Gender and DepartmentId = @DepartmentId
+End
+
+To invoke this procedure, we need to pass the value for @Gender and @DepartmentId parameters. If you don't specify the name of the parameters, you have to first pass value for @Gender parameter and then for @DepartmentId.
+EXECUTE spGetEmployeesByGenderAndDepartment 'Male', 1
+
+On the other hand, if you change the order, you will get an error stating "Error converting data type varchar to int." This is because, the value of "Male" is passed into @DepartmentId parameter. Since @DepartmentId is an integer, we get the type conversion error.
+
+___________________________________________________________________________
+
+When you specify the names of the parameters when executing the stored procedure the order doesn't matter.
+EXECUTE spGetEmployeesByGenderAndDepartment @DepartmentId=1, @Gender = 'Male'
+
+
+____________________________________________________________________________________________
+
+Alter Procedure spGetEmployeesByGenderAndDepartment 
+@Gender nvarchar(50),
+@DepartmentId int
+as
+Begin
+  Select Name, Gender from tblEmployee Where Gender = @Gender and DepartmentId = @DepartmentId order by Name
+End
+
+__________________________________________________________________________________________________
+
+To encrypt the text of the SP, use WITH ENCRYPTION option. Once, encrypted, you cannot view the text of the procedure, using sp_helptext system stored procedure. There are ways to obtain the original text, which we will talk about in a later session.
+Alter Procedure spGetEmployeesByGenderAndDepartment 
+@Gender nvarchar(50),
+@DepartmentId int
+WITH ENCRYPTION
+as
+Begin
+  Select Name, Gender from tblEmployee Where Gender = @Gender and DepartmentId = @DepartmentId
+End
+
+To delete the SP, use DROP PROC 'SPName' or DROP PROCEDURE 'SPName'
+
+-------------------------------------------------------------------------------
