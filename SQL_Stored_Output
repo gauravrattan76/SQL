@@ -1,0 +1,26 @@
+Stored Procudre with output parameters-
+__________________________________________________
+
+To create an SP with output parameter, we use the keywords OUT or OUTPUT. @EmployeeCount is an OUTPUT parameter. Notice, it is specified with OUTPUT keyword. 
+Create Procedure spGetEmployeeCountByGender
+@Gender nvarchar(20),
+@EmployeeCount int Output
+as
+Begin
+ Select @EmployeeCount = COUNT(Id) 
+ from tblEmployee 
+ where Gender = @Gender
+End 
+
+
+Declare @EmployeeTotal int
+Execute spGetEmployeeCountByGender 'Female', @EmployeeTotal output
+Print @EmployeeTotal
+
+
+
+_________________________________________________
+
+STored procedure retiuns value 0 for sucees and 1 for failure.
+
+
