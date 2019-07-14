@@ -1,0 +1,25 @@
+Combining the rows of tblIndiaCustomers and tblUKCustomers using UNION ALL
+Select Id, Name, Email from tblIndiaCustomers
+UNION ALL
+Select Id, Name, Email from tblUKCustomers
+
+Query Results of UNION ALL
+
+
+
+Combining the rows of tblIndiaCustomers and tblUKCustomers using UNION
+Select Id, Name, Email from tblIndiaCustomers
+UNION
+Select Id, Name, Email from tblUKCustomers
+
+
+___________________________________________________________
+
+Differences between UNION and UNION ALL (Common Interview Question)
+From the output, it is very clear that, UNION removes duplicate rows, where as UNION ALL does not. When use UNION, to remove the duplicate rows, sql server has to to do a distinct sort, which is time consuming. For this reason, UNION ALL is much faster than UNION. 
+
+
+___________________________________________________________________
+
+Differences between UNION and UNION ALL (Common Interview Question)
+From the output, it is very clear that, UNION removes duplicate rows, where as UNION ALL does not. When use UNION, to remove the duplicate rows, sql server has to to do a distinct sort, which is time consuming. For this reason, UNION ALL is much faster than UNION. 
