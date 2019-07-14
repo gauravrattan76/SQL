@@ -1,0 +1,26 @@
+Data Normalization-
+______________________________________________________________
+
+Database normalization is the process of organizing data to minimize data redundancy (data duplication), which in turn ensures data consistency. 
+
+__________________________________________________________________
+
+Let's understand with an example, how redundant data can cause data inconsistency. Consider Employees table below. For every employee with in the same department, we are repeating, all the 3 columns (DeptName, DeptHead and DeptLocation). Let's say for example, if there 50 thousand employees in the IT department, we would have unnecessarily repeated all the 3 department columns (DeptName, DeptHead and DeptLocation) data 50 thousand times. The obvious problem with redundant data is the disk space wastage.
+ 
+ so what happens here is that for each employee beling to some department and the department detials we need to repeat again and again
+ 
+ _____________________________________________________________________
+ 
+ Another common problem, is that data can become inconsistent. For example, let's say, JOHN has resigned, and we have a new department head (STEVE) for IT department. At present, there are 3 IT department rows in the table, and we need to update all of them. Let's assume I updated only one row and forgot to update the other 2 rows, then obviously, the data becomes inconsistent.
+ 
+ 
+ If there is a update required then we need to update it everywhere.
+ __________________________________________________________________________
+ So, to reduce the data redundancy, we can divide this large badly organised table into two (Employees and Departments), as shown below. Now, we have reduced redundant department data. So, if we have to update department head name, we only have one row to update, even if there are 10 million employees in that department. 
+ 
+ So we split the data for two tables and develop relationship between the two tbles using foregin key rlatsionship.
+ 
+ _______________________________________________________________________________
+ 
+ 
+ Database normalization is a step by step process. There are 6 normal forms, First Normal form (1NF) thru Sixth Normal Form (6NF). Most databases are in third normal form (3NF). There are certain rules, that each normal form should follow.
