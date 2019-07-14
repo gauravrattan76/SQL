@@ -1,4 +1,9 @@
 The following advantages of using Stored Procedures over adhoc queries (inline SQL) 
+Whenevr we make  call for running sql query
+1/it checks the syntax
+compiles the query
+generates execution plan- for the query to retrive data what is the best possible way.
+
 1. Execution plan retention and reusability - Stored Procedures are compiled and their execution plan is cached and used again, when the same SP is executed again. Although adhoc queries also create and reuse plan, the plan is reused only when the query is textual match and the datatypes are matching with the previous call. Any change in the datatype or you have an extra space in the query then, a new plan is created.
 
 2. Reduces network traffic - You only need to send, EXECUTE SP_Name statement, over the network, instead of the entire batch of adhoc SQL code.
